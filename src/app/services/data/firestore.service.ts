@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { AngularFirestore } from 'angularfire2/firestore';
 import { Restaurant } from '../../models/hotels.interface';
+import { debug } from 'util';
 
 @Injectable({
   providedIn: 'root'
@@ -9,26 +10,25 @@ export class FirestoreService {
 
   constructor(public firestore: AngularFirestore) { }
 
-  addRestaurant(
-    resName: string,
-    resAddress: string,
-    resPhone: String,
-    resDescription: string,
-    resTags: string
-  ): Promise<void> { 
+  addRestaurant(name: string,address: string,phone: String,description: string,tags: string):Promise<void> { 
     const id = this.firestore.createId();
-
-    return this.firestore.doc('resList/${{id}}').set({
-      id,
-      resName,
-      resAddress,
-      resPhone,
-      resDescription,
-      resTags
+    console.log("your id "+id);
+    return this.firestore.doc('resList/'+id).set({
+      resId: id,
+      resName: name,
+      resAddress: address,
+      resPhone: phone,
+      resDescription: description,
+      resTags: tags
     });
   }
 
   getRestaurants() {
     return this.firestore.collection('resList');
+  }
+
+  getRestaurantDetail(resId: string) {
+    console.log("Detail id"+resId);
+    return this.firestore.collection('resList').doc(resId);
   }
 }

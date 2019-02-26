@@ -1,9 +1,18 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>restaurantdetails</ion-title>
-  </ion-toolbar>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+          <ion-back-button></ion-back-button>
+        </ion-buttons>
+        <ion-title> {{ (restaurant | async)?.resName }}</ion-title>
+      </ion-toolbar>
 </ion-header>
 
 <ion-content padding>
+    
+        <h2> {{ (restaurant | async)?.resName }} </h2>
+        <p> Address: {{(restaurant | async)?.resAddress}}</p>
+        <p> Phone: {{ (restaurant | async)?.resPhone }} </p>
+        <p> Description: {{ (restaurant | async)?.resDescription }} </p>
+        <p> Tags: {{ (restaurant | async)?.resTags }} </p>
 
 </ion-content>
