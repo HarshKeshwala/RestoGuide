@@ -1,0 +1,51 @@
+<ion-header>
+  <ion-toolbar>
+      <ion-buttons slot="start">
+          <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+    <ion-title>Add Restaurant</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+    <form [formGroup]="addRestoForm" (submit)="AddRestaurant()">
+      <ion-item>
+        <ion-label stacked>Name: </ion-label>
+        <ion-input formControlName="resName" type="text">
+        </ion-input>
+      </ion-item>
+  
+      <ion-item>
+        <ion-label stacked>Address: </ion-label>
+        <ion-input formControlName="resAddress" type="text">
+        </ion-input>
+      </ion-item>
+  
+      <ion-item>
+        <ion-label stacked>Phone: </ion-label>
+        <ion-input formControlName="resPhone" type="text">
+        </ion-input>
+      </ion-item>
+  
+      <ion-item>
+        <ion-label stacked>Description: </ion-label>
+        <ion-input formControlName="resDescription" type="text">
+        </ion-input>
+      </ion-item>
+  
+      <ion-item>
+        <ion-label stacked>Tags: </ion-label>
+        <ion-input formControlName="resTags" type="text">
+        </ion-input>
+      </ion-item>
+  
+      <ion-button expand="block" type="submit" 
+        [disabled]="!addRestoForm.valid">
+        Add Restaurant
+      </ion-button>
+    </form>
+  </ion-content>
+  
+  
+  
+  

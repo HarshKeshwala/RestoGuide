@@ -14,6 +14,12 @@ const routes: Routes = [
   {
     path: 'list',
     loadChildren: './list/list.module#ListPageModule'
+  },
+  { path: 'addrestaurant',
+    loadChildren: './addrestaurant/addrestaurant.module#AddrestaurantPageModule'
+  },
+  { path: 'restaurantdetails/:id',
+    loadChildren: './restaurantdetails/restaurantdetails.module#RestaurantdetailsPageModule'
   }
 ];
 
