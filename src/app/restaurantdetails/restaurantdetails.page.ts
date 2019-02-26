@@ -28,6 +28,10 @@ export class RestaurantdetailsPage implements OnInit {
     this.restaurant = this.firestoreService.getRestaurantDetail(this.resId).valueChanges();
   }
 
+  // edit() {
+  //   this.navCtrl.navigateRoot('/editrestaurant/'+this.resId)
+  //   console.log("/editrestaurant/"+this.resId)
+  // }
   async deleteRestaurant() {
 
     const alert = await this.alertCtrl.create({

@@ -15,11 +15,17 @@ const routes: Routes = [
     path: 'list',
     loadChildren: './list/list.module#ListPageModule'
   },
-  { path: 'addrestaurant',
+  { 
+    path: 'addrestaurant',
     loadChildren: './addrestaurant/addrestaurant.module#AddrestaurantPageModule'
   },
-  { path: 'restaurantdetails/:id',
+  { 
+    path: 'restaurantdetails/:id',
     loadChildren: './restaurantdetails/restaurantdetails.module#RestaurantdetailsPageModule'
+  },
+  { 
+    path: 'editrestaurant/:id',
+    loadChildren: './editrestaurant/editrestaurant.module#EditrestaurantPageModule'
   }
 ];
 

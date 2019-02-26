@@ -36,4 +36,14 @@ export class FirestoreService {
     //console.log("delete id in service ${{resId}}")
     return this.firestore.doc('resList/'+resId).delete();
   }
+
+  updateRestaurant(id: string, name: string,address: string,phone: String,description: string,tags: string):Promise<void> {
+    return this.firestore.doc('resList/'+id).update({
+      resName: name,
+      resAddress: address,
+      resPhone: phone,
+      resDescription: description,
+      resTags: tags
+    });
+  }
 }

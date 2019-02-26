@@ -1,0 +1,52 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title> {{ (restaurant | async)?.resName }}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <form [formGroup]="editRestoForm" (submit)="updateRestaurant()">
+    <ion-item>
+      <ion-label stacked>Name: </ion-label>
+      <ion-input formControlName="resNewName" type="text" value="{{ (restaurant | async)?.resName }}">
+      </ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label stacked>Address: </ion-label>
+      <ion-input formControlName="resNewAddress" type="text" value="{{ (restaurant | async)?.resAddress }}">
+      </ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label stacked>Phone: </ion-label>
+      <ion-input formControlName="resNewPhone" type="text" value="{{ (restaurant | async)?.resPhone }}">
+      </ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label stacked>Description: </ion-label>
+      <ion-input formControlName="resNewDescription" type="text" value="{{ (restaurant | async)?.resDescription }}">
+      </ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label stacked>Tags: </ion-label>
+      <ion-input formControlName="resNewTags" type="text" value="{{ (restaurant | async)?.resTags }}">
+      </ion-input>
+    </ion-item>
+
+    <ion-button expand="block" type="submit" 
+      [disabled]="!editRestoForm.valid">
+      Update Details
+    </ion-button>
+  </form>
+
+</ion-content>
+  
+  
+  
+  
