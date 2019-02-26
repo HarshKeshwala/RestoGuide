@@ -12,13 +12,38 @@
 
 <ion-content padding>
     
-        <h2> {{ (restaurant | async)?.resName }} </h2>
+  <h1>
+      <ion-item>
+        <ion-label expand="block" slot="end"> {{ (restaurant | async)?.resName }} </ion-label>
+      </ion-item>
+  </h1>
+      <ion-item>
+        <ion-label stacked>Address: {{(restaurant | async)?.resAddress}} </ion-label>
+      </ion-item>
+
+      <ion-item>
+        <ion-label stacked>Phone: {{ (restaurant | async)?.resPhone }}</ion-label>
+      </ion-item>
+
+      <ion-item>
+        <ion-label stacked>Description: {{ (restaurant | async)?.resDescription }}</ion-label>
+      </ion-item>
+
+      <ion-item>
+        <ion-label stacked>Tags: {{ (restaurant | async)?.resTags }}</ion-label>
+      </ion-item>
+
+      
+      <ion-item>
+        <ion-button color="danger" expand="block" slot="end" (click)="deleteRestaurant()">Delete</ion-button>
+      </ion-item>
+        <!-- <h2> {{ (restaurant | async)?.resName }} </h2>
         <p> Address: {{(restaurant | async)?.resAddress}}</p>
         <p> Phone: {{ (restaurant | async)?.resPhone }} </p>
         <p> Description: {{ (restaurant | async)?.resDescription }} </p>
-        <p> Tags: {{ (restaurant | async)?.resTags }} </p>
+        <p> Tags: {{ (restaurant | async)?.resTags }} </p> -->
 
-        <div class="buttons">
+        <!-- <div class="buttons">
           <ion-button color="danger" (click)="deleteRestaurant()">Delete</ion-button>
-        </div>
+        </div> -->
 </ion-content>
