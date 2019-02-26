@@ -28,7 +28,12 @@ export class FirestoreService {
   }
 
   getRestaurantDetail(resId: string) {
-    console.log("Detail id"+resId);
+    //console.log("Detail id"+resId);
     return this.firestore.collection('resList').doc(resId);
+  }
+
+  deleteRestaurant(resId: string): Promise<void> {
+    //console.log("delete id in service ${{resId}}")
+    return this.firestore.doc('resList/'+resId).delete();
   }
 }

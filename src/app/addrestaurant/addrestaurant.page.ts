@@ -7,7 +7,7 @@ import { FirestoreService } from '../services/data/firestore.service';
 
 import { NavController } from '@ionic/angular';
 import { RouterLink } from '@angular/router';
-//ort { HomePage} from '../home/home.page'
+
 @Component({
   selector: 'app-addrestaurant',
   templateUrl: './addrestaurant.page.html',
