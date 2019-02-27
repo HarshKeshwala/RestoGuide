@@ -26,6 +26,10 @@ const routes: Routes = [
   { 
     path: 'editrestaurant/:id',
     loadChildren: './editrestaurant/editrestaurant.module#EditrestaurantPageModule'
+  },
+  { 
+    path: 'raterestaurant/:id',
+    loadChildren: './raterestaurant/raterestaurant.module#RaterestaurantPageModule'
   }
 ];
 

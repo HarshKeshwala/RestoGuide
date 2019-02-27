@@ -40,8 +40,9 @@ export class AddrestaurantPage implements OnInit {
     const resPhone = this.addRestoForm.value.resPhone;
     const resDescription = this.addRestoForm.value.resDescription;
     const resTags = this.addRestoForm.value.resTags;
+    const resRatings = "";
 
-    this.firestoreService.addRestaurant(resName, resAddress, resPhone, resDescription, resTags).then(() => {
+    this.firestoreService.addRestaurant(resName, resAddress, resPhone, resDescription, resTags, resRatings).then(() => {
         loading.dismiss().then(() => {
           this.navCtrl.navigateRoot('/list')
         });

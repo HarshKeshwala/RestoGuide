@@ -33,9 +33,16 @@
         <ion-label stacked>Tags: {{ (restaurant | async)?.resTags }}</ion-label>
       </ion-item>
 
+      <ion-item *ngIf="(restaurant | async)?.resRatings != ''; else noCard">
+          <ion-label stacked>Ratings: {{ (restaurant | async)?.resRatings }}</ion-label>
+        </ion-item>
       
       <ion-item>
         <ion-button color="danger" expand="block" slot="end" (click)="deleteRestaurant()">Delete</ion-button>
+      </ion-item>
+
+      <ion-item>
+        <ion-button color="danger" expand="block" slot="end" routerLink="/raterestaurant/{{ (restaurant | async)?.resId }}">Rate</ion-button>
       </ion-item>
         <!-- <h2> {{ (restaurant | async)?.resName }} </h2>
         <p> Address: {{(restaurant | async)?.resAddress}}</p>

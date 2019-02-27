@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title> {{ (restaurant | async)?.resName }}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+    <form [formGroup]="rateRestoForm" (submit)="rateRestaurant()">
+        <ion-item>
+          <ion-label stacked>Rating: </ion-label>
+          <ion-input formControlName="resRating" type="text" value="{{ (restaurant | async)?.resRatings }}">
+          </ion-input>
+        </ion-item>
+    
+        <ion-button expand="block" type="submit" 
+          [disabled]="!rateRestoForm.valid">
+          Rate Restaurant
+        </ion-button>
+      </form>
+
+</ion-content>
