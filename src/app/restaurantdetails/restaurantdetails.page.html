@@ -31,7 +31,7 @@
       <ion-item>
         <ion-label stacked>Tags: {{ (restaurant | async)?.resTags }}</ion-label>
       </ion-item>
-      
+        
       <ion-item *ngIf="(restaurant | async)?.resRatings != ''; else noCard">
           <ion-label stacked>Ratings: {{ (restaurant | async)?.resRatings }}</ion-label>
           <ion-icon *ngIf="(restaurant | async)?.resRatings < 3" danger name="sad"></ion-icon>
