@@ -14,9 +14,10 @@ import { AngularFirestoreModule } from 'angularfire2/firestore';
 import { firebaseConfig } from './credentials';
 
 import { FirestoreSettingsToken} from '@angular/fire/firestore';
+import { SearchPipe } from './search.pipe';
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, SearchPipe],
   entryComponents: [],
   imports: [
     BrowserModule,

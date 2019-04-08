@@ -3,6 +3,9 @@
     <ion-buttons slot="start">
       <ion-back-button></ion-back-button>
     </ion-buttons>
+    <ion-buttons slot="end">
+        <button class="button button-clear button-positive" routerLink="/editrestaurant/{{ (restaurant | async)?.resId }}">Edit Details</button>
+      </ion-buttons>
     <ion-title> {{ (restaurant | async)?.resName }}</ion-title>
   </ion-toolbar>
 </ion-header>

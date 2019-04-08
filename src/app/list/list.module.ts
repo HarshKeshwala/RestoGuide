@@ -5,7 +5,7 @@ import { IonicModule } from '@ionic/angular';
 import { RouterModule } from '@angular/router';
 
 import { ListPage } from './list.page';
-
+// import { SearchPipe } from '../search.pipe';
 @NgModule({
   imports: [
     CommonModule,
