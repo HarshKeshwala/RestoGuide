@@ -3,10 +3,10 @@ import { AngularFirestore } from 'angularfire2/firestore';
 import { Restaurant } from '../../models/hotels.interface';
 import { debug } from 'util';
 import { stringify } from 'querystring';
-
 @Injectable({
   providedIn: 'root'
 })
+
 export class FirestoreService {
 
   constructor(public firestore: AngularFirestore) { }

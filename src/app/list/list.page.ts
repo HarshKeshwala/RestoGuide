@@ -16,6 +16,7 @@ import { FormControl } from '@angular/forms';
 export class ListPage implements OnInit {
 
   public resList; 
+  list: Array<any>;
   column: string = 'name';
 
   constructor(
@@ -29,13 +30,13 @@ export class ListPage implements OnInit {
   }
   
   getItems(ev) {
-    // Reset items back to all of the items
-    this.resList();
+    this.list = this.resList;
     // set val to the value of the ev target
     var val = ev.target.value;
+
     // if the value is an empty string don't filter the items
     if (val && val.trim() != '') {
-      this.resList = this.resList.filter((item) => {
+      this.list = this.resList.filter((item) => {
         return (item.toLowerCase().indexOf(val.toLowerCase()) > -1);
       })
     }

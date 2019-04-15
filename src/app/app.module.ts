@@ -16,6 +16,11 @@ import { firebaseConfig } from './credentials';
 import { FirestoreSettingsToken} from '@angular/fire/firestore';
 import { SearchPipe } from './search.pipe';
 
+import {Geolocation} from '@ionic-native/geolocation/ngx';
+
+import { SocialSharing } from '@ionic-native/social-sharing/ngx';
+import { File } from '@ionic-native/file/ngx';
+
 @NgModule({
   declarations: [AppComponent, SearchPipe],
   entryComponents: [],
@@ -29,6 +34,9 @@ import { SearchPipe } from './search.pipe';
   providers: [
     StatusBar,
     SplashScreen,
+    Geolocation,
+    SocialSharing,
+    File,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
     { provide: FirestoreSettingsToken, useValue: {} }
   ],
