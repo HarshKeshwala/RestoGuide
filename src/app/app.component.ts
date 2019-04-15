@@ -24,6 +24,11 @@ export class AppComponent {
       title: 'Add Restaurant',
       url: '/addrestaurant',
       icon: 'add'
+    },
+    {
+      title: 'About',
+      url: '/about',
+      icon: 'md-information-circle'
     }
   ];
 
