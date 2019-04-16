@@ -43,9 +43,12 @@
         <ion-button color="danger" expand="block" slot="end" (click)="deleteRestaurant()">Delete</ion-button>
       </ion-item>
       <ion-item text-center>
-          <ion-button expand="full" (click)="shareTwitter()">Share on Twitter</ion-button>
-          <ion-button expand="full" (click)="shareEmail()">Share by Email</ion-button>
-        </ion-item>
+          <!-- <ion-button expand="full" (click)="shareTwitter()">Share on Twitter</ion-button> -->
+          <!-- <ion-button expand="full" (click)="shareEmail()">Share by Email</ion-button> -->
+          <button ion-button (click)="shareEmail()">Share by Email</button>
+          <button ion-button (click)="facebookShare()">Share on Facebook</button>
+          <button ion-button (click)="twitterShare()">Share on Twitter</button>
+       </ion-item>
         <!-- <h2> {{ (restaurant | async)?.resName }} </h2>
         <p> Address: {{(restaurant | async)?.resAddress}}</p>
         <p> Phone: {{ (restaurant | async)?.resPhone }} </p>
